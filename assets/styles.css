@@ -1,6 +1,4 @@
-body {
-    background-color: gray;
-}
+
 header {
     text-align: center;
     margin-top: 50px;
@@ -8,14 +6,25 @@ header {
 
 
 .divider {
-    padding: 10px;
+    margin-bottom: 10px;
     padding: 20px;
     border-bottom: solid 2px;
-    background-color:lightcyan;
-    
+    background-color:maroon;
 }
 
 img {
     height: 50px;
 }
 
+li {
+    color: white;
+    font-size: 25px;
+}
+
+p {
+    color: white;
+    font-size: 1.2rem;
+    justify-items: center;
+    margin: auto;
+    font-weight: bold;
+}
