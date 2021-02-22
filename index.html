@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,109 +8,221 @@
     <title>Day Planner</title>
     <!-- CSS links -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/styles.css">
 </head>
+
 <body>
 
+<!-- Header Div -->
+    <header class='container'>
+        <section class="row">
+            <div class="timeImage col-1"></div>
+            <div class="col-10">
+                <h1>Good <span id="timeOfDay"></span>! Today's date is <span id="today"></span></h1>
+                <h2>The current time is <span id="currentTime"></span></h2>
+            </div>
 
-<header class = 'container'>
-    <section class="row">
-        <div class="timeImage col-1"></div>
-        <div class = "col-10">
-            <h1 >Good <span id = "timeOfDay"></span>! Today's date is <span id = "today"></span></h1>
-            <h2>The current time is <span id = "currentTime"></span></h2>
+            <div class="timeImage col-1"></div>
+        </section>
+
+
+    </header>
+
+<!-- Div of all the individual time containers -->
+    <section class='listContainer'>
+        <!-- 9:00 div -->
+        <div class="row divider">
+            <div class="col-1 form-inline">
+                <h3><span class="badge">9 AM</span></h3>
+                </ul>
+            </div>
+            <div class="col-10">
+                <input id="09input" class="form-control form-control-lg" type="text" placeholder="Got Plans?">
+                <ul class="09">
+            </div>
+            <div class="col-1">
+                <button class="form-control btn btn-lg btn-dark 9button"><i class="fa fa-save"></i></button>
+            </div>
         </div>
-        
-        <div class="timeImage col-1"></div>
+        <!-- 10:00 div -->
+        <div class="row divider">
+            <div class="col-1 time form-inline">
+                <h3><span class="badge">10 AM</span></h3>
+
+                </ul>
+            </div>
+            <div class="col-10">
+                <input id="10input" class="form-control form-control-lg" type="text" placeholder="Got Plans?">
+                <ul class="10">
+            </div>
+            <div class="col-1">
+                <button class="form-control btn btn-lg btn-dark 10button"><i class="fa fa-save"></i></button>
+            </div>
+        </div>
+        <!-- 11:00 div -->
+        <div class="row divider">
+            <div class="col-1 time form-inline">
+                <h3><span class="badge">11 AM</span></h3>
+                </ul>
+            </div>
+            <div class="col-10">
+                <input id="11input" class="form-control form-control-lg" type="text" placeholder="Got Plans?">
+                <ul class="11">
+            </div>
+            <div class="col-1">
+                <button class="form-control btn btn-lg btn-dark 11button"><i class="fa fa-save"></i></button>
+            </div>
+        </div>
+        <!-- 12:00 div -->
+        <div class="row divider">
+            <div class="col-1 time form-inline">
+                <h3><span class="badge">12 PM</span></h3>
+                </ul>
+            </div>
+            <div class="col-10">
+                <input id="12input" class="form-control form-control-lg" type="text" placeholder="Got Plans?">
+                <ul class="12">
+            </div>
+            <div class="col-1">
+                <button class="form-control btn btn-lg btn-dark 12button"><i class="fa fa-save"></i></button>
+            </div>
+        </div>
+        <!-- 1:00 div -->
+        <div class="row divider">
+            <div class="col-1 time form-inline">
+                <h3><span class="badge">1 PM</span></h3>
+                </ul>
+            </div>
+            <div class="col-10">
+                <input id="1input" class="form-control form-control-lg" type="text" placeholder="Got Plans?">
+                <ul class="1">
+            </div>
+            <div class="col-1">
+                <button class="form-control btn btn-lg btn-dark 1button"><i class="fa fa-save"></i></button>
+            </div>
+        </div>
+        <!-- 2:00 div -->
+        <div class="row divider">
+            <div class="col-1 time form-inline">
+                <h3><span class="badge">2PM</span></h3>
+                </ul>
+            </div>
+            <div class="col-10">
+                <input id="2input" class="form-control form-control-lg" type="text" placeholder="Got Plans?">
+                <ul class="2">
+            </div>
+            <div class="col-1">
+                <button class="form-control btn btn-lg btn-dark 2button"><i class="fa fa-save"></i></button>
+            </div>
+        </div>
+        <!-- 3:00 div -->
+        <div class="row divider">
+            <div class="col-1 time form-inline">
+                <h3><span class="badge">3 PM</span></h3>
+                </ul>
+            </div>
+            <div class="col-10">
+                <input id="3input" class="form-control form-control-lg" type="text" placeholder="Got Plans?">
+                <ul class="3">
+            </div>
+            <div class="col-1">
+                <button class="form-control btn btn-lg btn-dark 3button"><i class="fa fa-save"></i></button>
+            </div>
+        </div>
+        <!-- 4:00 div -->
+        <div class="row divider">
+            <div class="col-1 time form-inline">
+                <h3><span class="badge">4 PM</span></h3>
+                </ul>
+            </div>
+            <div class="col-10">
+                <input id="4input" class="form-control form-control-lg" type="text" placeholder="Got Plans?">
+                <ul class="4">
+            </div>
+            <div class="col-1">
+                <button class="form-control btn btn-lg btn-dark 4button"><i class="fa fa-save"></i></button>
+            </div>
+        </div>
+        <!-- 5:00 div -->
+        <div class="row divider">
+            <div class="col-1 time form-inline">
+                <h3><span class="badge">5 PM</span></h3>
+                </ul>
+            </div>
+            <div class="col-10">
+                <input id="5input" class="form-control form-control-lg" type="text" placeholder="Got Plans?">
+                <ul class="5">
+            </div>
+            <div class="col-1">
+                <button class="form-control btn btn-lg btn-dark 5button"><i class="fa fa-save"></i></button>
+            </div>
+        </div>
+
     </section>
-    
-    
-</header>
 
+    <!-- Footer -->
+    <footer>
+        Made by Sean!
+    </footer>
 
-    <section class = 'listContainer'>
-
-        <div value = "9" class="divider">
-            <form class="form-inline row">
-                <div class="form-group col-1">
-                    <label> <p><span>9 AM</span></p> </label>
-                </div>
-                <div class="form-group col-10">
-                  <label class="sr-only"></label>
-                  <input type="text" class="form-control" id="9input" placeholder="Got Plans?">
-                </div>
-                <button type="submit" id = "9button" class="btn btn-dark col-1"><i class="fa fa-save"></i></button>
-              </form> 
-        </div>
-
-        <div class="divider">
-            <form class="form-inline row">
-                <div class="form-group col-1">
-                  <label> <p><span>10 AM</span></p> </label>
-                </div>
-                <div class="form-group col-10">
-                  <label class="sr-only"></label>
-                  <input type="text" class="form-control" id="10input" placeholder="Got Plans?">
-                </div>
-                <button type="submit" id = "10button" class="btn btn-dark col-1"><i class="fa fa-save"></i></button>
-              </form> 
-        </div>
-
-        <div class="divider">
-            <form class="form-inline row">
-                <div class="form-group col-1">
-                    <label> <p><span>11 AM</span></p> </label>
-                </div>
-                <div class="form-group col-10">
-                  <label class="sr-only"></label>
-                  <input type="text" class="form-control" id="11input" placeholder="Got Plans?">
-                </div>
-                <button type="submit" id = "11button" class="btn btn-dark col-1"><i class="fa fa-save"></i></button>
-              </form> 
-        </div>
-
-    
-        
-
-
-            
-        
-
-       
-
-        
-        
-    </section>
-
-
-    
 
 
 
     <!-- Script Files -->
-<script src="assets/luxon.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="assets/app.js"></script>
+    <script src="assets/luxon.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="assets/app.js"></script>
 </body>
+
 </html>
 
 
-<!-- <div class="row divider">
-    <div class = "col-1 time 00">
-        <h3><span class = "badge">9 AM</span></h3>
 
-        </ul>
-    </div>
 
-    <div class = "col-10">
-        <input id = "09input" class = "form-control form-control-lg" type="text" placeholder = "Got Plans?">
-        <ul class = "09">
-    </div>
 
-    <div class = "col-1">
-        <button class = "btn btn-lg btn-dark"><i class="fa fa-save"></i></button>
-    </div>
 
+
+
+<!-- <div value = "9" class="divider">
+    <form class="form-inline row">
+        <div class="form-group col-1">
+            <label> <p><span>9 AM</span></p> </label>
+        </div>
+        <div class="form-group col-10">
+          <label class="sr-only"></label>
+          <input type="text" class="form-control" id="9input" placeholder="Got Plans?">
+        </div>
+        <button id = "9button" class="btn btn-dark col-1"><i class="fa fa-save"></i></button>
+      </form> 
+</div>
+
+<div class="divider">
+    <form class="form-inline row">
+        <div class="form-group col-1">
+          <label> <p><span>10 AM</span></p> </label>
+        </div>
+        <div class="form-group col-10">
+          <label class="sr-only"></label>
+          <input type="text" class="form-control" id="10input" placeholder="Got Plans?">
+        </div>
+        <button id = "10button" class="btn btn-dark col-1"><i class="fa fa-save"></i></button>
+      </form> 
+</div>
+
+<div class="divider">
+    <form class="form-inline row">
+        <div class="form-group col-1">
+            <label> <p><span>11 AM</span></p> </label>
+        </div>
+        <div class="form-group col-10">
+          <label class="sr-only"></label>
+          <input type="text" class="form-control" id="11input" placeholder="Got Plans?">
+        </div>
+        <button id = "11button" class="btn btn-dark col-1"><i class="fa fa-save"></i></button>
+      </form> 
 </div> -->
