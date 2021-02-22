@@ -10,6 +10,7 @@ let images = $(".timeImage");
 let liEl = $("li");
 let divEl = $("div");
 
+
 // button variables
 let nineButton = $(".9button");
 let tenButton = $(".10button");
@@ -21,35 +22,25 @@ let threeButton = $(".3button");
 let fourButton = $(".4button");
 let fiveButton = $(".5button");
 
-// Arrays for storing List Items for local storage
-let array9 = [];
-let array10 = [];
-let array11 = [];
-let array12 = [];
-let array1 = [];
-let array2 = [];
-let array3 = [];
-let array4 = [];
-let array5 = [];
 
-// setting local storage variables
-// sessionStorage.getItem(array9);
-// console.log(array9.text);
 
-for (i = 0; i < array9.length; i++) {
-    $(".09").append(sessionStorage.getItem(array9[i].text));
-    console.log(array9);
-}   
+// local storage
+
+let stored9 = localStorage.getItem('stored9');
+$("09input").textContent = stored9;
+
+let stored9 = JSON.parse(localStorage.getItem('array9'));
+
+
 
 // Time Variables
 let f = {hour: 'numeric', minute: '2-digit'};
 let h = today.get('hour');
 let currentTimeText = today.toLocaleString(f);
 
-nineButton.click(function(){
+nineButton.click(function() {
+    
     array9.push({text: $('#09input').val()});
-    // sessionStorage.setItem("array9", JSON.stringify(array9));
-    // console.log(array9);
     $('.09').append($('<li>', {
          text: $('#09input').val()
     }));
@@ -57,7 +48,7 @@ nineButton.click(function(){
 tenButton.click(function(){
     $('.10').append($('<li>', {
          text: $('#10input').val()
-    }));
+    })) 
 });
 elevenButton.click(function(){
     $('.11').append($('<li>', {
@@ -114,11 +105,34 @@ function setTimeOfDay() {
         $("body").css("background-color", "lightblue");
         images.prepend($('<img>',{id:'risingSun',src:'https://www.pikpng.com/pngl/m/2-24499_28-collection-of-sunrise-clipart-transparent-clip-art.png'}));
     } else {
-        timeOfDay.text("Day");
+        timeOfDay.text("Afternoon");
         $("body").css("background-color", "orange");
         images.prepend($('<img>',{id:'sun',src:'http://clipart-library.com/image_gallery/n401246.jpg'}));
     }
 };
+
+console.log(h);
+
+// Set color based on time of day
+if (h === 9) {
+    $("#9Div").css('background-color', 'yellow');
+} else if (h === 10) {
+    $("#10Div").css('background-color', 'yellow');
+}else if (h === 11) {
+    $("#11Div").css('background-color', 'yellow');
+} else if (h === 12) {
+    $("#12Div").css('background-color', 'yellow');
+} else if (h === 13) {
+    $("#1Div").css('background-color', 'yellow');
+} else if (h === 14) {
+    $("#2Div").css('background-color', 'yellow');
+} else if (h === 15) {
+    $("#3Div").css('background-color', 'yellow');
+} else if (h === 16) {
+    $("#4Div").css('background-color', 'yellow');
+} else if (h === 16) {
+    $("#4Div").css('background-color', 'yellow');
+}
 
 
 function init() {
