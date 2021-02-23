@@ -111,7 +111,7 @@ function setTimeOfDay() {
         $("footer").css("color", "white");
         images.prepend($('<img>', {
             id: 'moon',
-            src: 'http://clipart-library.com/images_k/moon-clipart-transparent/moon-clipart-transparent-10.png'
+            src: 'assets/images/moon.png'
         }));
     } else if (h < 12) {
         timeOfDay.text("Morning");
@@ -121,7 +121,7 @@ function setTimeOfDay() {
         $("footer").css("color", "black");
         images.prepend($('<img>', {
             id: 'risingSun',
-            src: 'https://www.pikpng.com/pngl/m/2-24499_28-collection-of-sunrise-clipart-transparent-clip-art.png'
+            src: 'assets/images/risingsun.png'
         }));
     } else {
         timeOfDay.text("Afternoon");
@@ -132,7 +132,7 @@ function setTimeOfDay() {
         console.log("grah");
         images.prepend($('<img>', {
             id: 'sun',
-            src: 'http://clipart-library.com/image_gallery/n401246.jpg'
+            src: 'assets/images/suncloud.png'
         }));
     }
 };
