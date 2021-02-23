@@ -108,6 +108,7 @@ function setTimeOfDay() {
         $("body").css("background-color", "#241663");
         $("div").css("background-color", "#202040");
         $("body").css("color", "#ffbd69");
+        $("footer").css("color", "white");
         images.prepend($('<img>', {
             id: 'moon',
             src: 'http://clipart-library.com/images_k/moon-clipart-transparent/moon-clipart-transparent-10.png'
@@ -117,6 +118,7 @@ function setTimeOfDay() {
         $("body").css("background-color", "#8ac4d0");
         $("div").css("background-color", "#ffd384");
         $("body").css("color", "#4a3933");
+        $("footer").css("color", "black");
         images.prepend($('<img>', {
             id: 'risingSun',
             src: 'https://www.pikpng.com/pngl/m/2-24499_28-collection-of-sunrise-clipart-transparent-clip-art.png'
@@ -126,6 +128,8 @@ function setTimeOfDay() {
         $("body").css("background-color", "#ffe227");
         $("div").css("background-color", "#d9dab0");
         $("body").css("color", "#4a3933");
+        $("footer").css("color", "black");
+        console.log("grah");
         images.prepend($('<img>', {
             id: 'sun',
             src: 'http://clipart-library.com/image_gallery/n401246.jpg'
@@ -164,8 +168,8 @@ function setDivider() {
     };  
 };
 
-h = 18
 
+// Set color based on time of day
 function setPastTimes() {
     if (h > 9) {
         $("#9Div").css('opacity', '0.7')
@@ -235,7 +239,6 @@ function setPastTimes() {
 }
 
 // Set color based on time of day
-
 
 
 function init() {
