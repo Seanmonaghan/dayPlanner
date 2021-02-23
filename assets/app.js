@@ -99,8 +99,6 @@ fiveButton.click(function () {
     localStorage.setItem('stored5', textOfFive);
 });
 
-h = 12
-
 // Greeting Conditional
 function setTimeOfDay() {
     currentDayText.text(today.toLocaleString());
@@ -135,9 +133,6 @@ function setTimeOfDay() {
     }
 };
 
-h = 12;
-console.log(h);
-
 
 function setDivider() {
     if (h === 9) {
@@ -170,7 +165,7 @@ function setDivider() {
 };
 // Set color based on time of day
 
-
+h = 16
 
 function init() {
     setTimeOfDay();

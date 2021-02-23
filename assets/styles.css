@@ -2,6 +2,7 @@
 header {
     text-align: center;
     margin-top: 50px;
+    margin-bottom: 40px;
 }
 
 
@@ -32,4 +33,4 @@ footer {
     margin-top: 100px;
     text-align: center;
     font-size: 40px;
-}
+};
