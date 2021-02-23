@@ -234,9 +234,7 @@ function setPastTimes() {
         $("#4Div").css('opacity', '0.7')
         $("#5Div").css('opacity', '0.7')
     };
-
-    
-}
+};
 
 // Set color based on time of day
 

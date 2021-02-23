@@ -1,47 +1,50 @@
-# 05 Third-Party APIs: Work Day Scheduler
+# Day Planner Application
 
-Create a simple calendar application that allows the user to save events for each hour of the day. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
+This is a simple calendar application that allows the user to save events for each
+hour of the work day.  It will run in the browser and feature dynamically updated 
+HTML and CSS powered by jQuery.
 
-You'll need to use the [Moment.js](https://momentjs.com/) library to work with date and time. Be sure to read the documentation carefully and concentrate on using Moment.js in the browser.
+This app utilizes the luxon.js library to dynamically update the time and date for the user's convenience.
 
-## User Story
 
-```
-AS AN employee with a busy schedule
-I WANT to add important events to a daily planner
-SO THAT I can manage my time effectively
-```
-
-## Acceptance Criteria
+## Ideal User
 
 ```
-GIVEN I am using a daily planner to create a schedule
-WHEN I open the planner
-THEN the current day is displayed at the top of the calendar
-WHEN I scroll down
-THEN I am presented with timeblocks for standard business hours
-WHEN I view the timeblocks for that day
-THEN each timeblock is color coded to indicate whether it is in the past, present, or future
-WHEN I click into a timeblock
-THEN I can enter an event
-WHEN I click the save button for that timeblock
-THEN the text for that event is saved in local storage
-WHEN I refresh the page
-THEN the saved events persist
+This app is ideal for an employee with a busy schedule that wants to add important
+daily events to a planner to manage their time more effectively.
+
 ```
 
-The following animation demonstrates the application functionality:
+## App Functionality
 
-![day planner demo](./Assets/05-third-party-apis-homework-demo.gif)
+```
+When the user wants to create a schedule they can open the day planner and the planner will display the current day at the top of the calendar.  This is done by adding empty spans in the HTML and using jQuery to dynamically update the time and date into those empty spans.
+```
 
-## Review
+![Overall display of the app functionality](assets/images/overall.png)
 
-You are required to submit the following for review:
+```
+When the user scrolls down, they will see time blocks for standard business hours that are created using HTML and have unique ID's based on their time slot.
+```
 
-* The URL of the deployed application.
+![code snippet of how HTML time divs are formatted](assets/images/htmlTimeDiv.png)
 
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
+```
+The app runs a function to determine the current time and will highlight that for the user, as well as another function that determines if that time block is in the past where it lowers the opacity so that the user can clearly see which time is past, present, and yet to come. 
+```
 
-- - -
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
-# dayPlanner
+![code snippet to show how the current time is bordered](assets/images/currentTime.png)
+![code snippet to show how the past times are displayed with a lowered opacity](assets/images/pastTime.png)
+
+```
+When the user clicks into the time block, they are able to enter an event.  The value of this input is locked in place using local storage once the corresponding save button is clicked, so that even if the user leaves the page or refreshes the information will be preserved.
+```
+
+![code snippet to show how the save buttons function](assets/images/saveButtons.png)
+
+```
+Please enjoy using this app! It also features dynamically changing backgrounds and text colors to provide the user with a different experience whether it be morning, afternoon or night.  Please forgive the non-existence of a permanent dark mode, I know this is a cardinal sin but I only have so much time per project.
+
+P.S. Please note that times were adjusted manually for demonstration purposes when collecting images for this README.md
+
+```
