@@ -25,7 +25,6 @@ let fiveButton = $(".5button");
 
 
 // local storage
-
 let stored9 = localStorage.getItem('stored9');
 $("#09input").val(stored9);
 
@@ -62,6 +61,8 @@ let f = {
 let h = today.get('hour');
 let currentTimeText = today.toLocaleString(f);
 
+
+// Button Variables
 nineButton.click(function () {
     var textOfNine = $('#09input').val();
     localStorage.setItem('stored9', textOfNine);
@@ -99,6 +100,8 @@ fiveButton.click(function () {
     localStorage.setItem('stored5', textOfFive);
 });
 
+h = 14;
+
 // Greeting Conditional
 function setTimeOfDay() {
     currentDayText.text(today.toLocaleString());
@@ -116,7 +119,7 @@ function setTimeOfDay() {
     } else if (h < 12) {
         timeOfDay.text("Morning");
         $("body").css("background-color", "#8ac4d0");
-        $("div").css("background-color", "#ffd384");
+        $("section").css("background-color", "#ffd384");
         $("body").css("color", "#4a3933");
         $("footer").css("color", "black");
         images.prepend($('<img>', {
@@ -126,10 +129,9 @@ function setTimeOfDay() {
     } else {
         timeOfDay.text("Afternoon");
         $("body").css("background-color", "#ffe227");
-        $("div").css("background-color", "#d9dab0");
+        $("section").css("background-color", "#d9dab0");
         $("body").css("color", "#4a3933");
         $("footer").css("color", "black");
-        console.log("grah");
         images.prepend($('<img>', {
             id: 'sun',
             src: 'assets/images/suncloud.png'
@@ -236,9 +238,7 @@ function setPastTimes() {
     };
 };
 
-// Set color based on time of day
-
-
+// Run all functions on load
 function init() {
     setTimeOfDay();
     setDivider();
