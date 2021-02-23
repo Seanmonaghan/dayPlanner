@@ -6,6 +6,8 @@ HTML and CSS powered by jQuery.
 
 This app utilizes the luxon.js library to dynamically update the time and date for the user's convenience.
 
+https://seanmonaghan.github.io/dayPlanner/
+
 
 ## Ideal User
 
