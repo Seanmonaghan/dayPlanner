@@ -160,16 +160,88 @@ function setDivider() {
         $("#4Div").css('border', 'double 10px');
     };
     if (h === 17) {
-        $("#4Div").css('border', 'double 10px');
+        $("#5Div").css('border', 'double 10px');
     };  
 };
+
+h = 18
+
+function setPastTimes() {
+    if (h > 9) {
+        $("#9Div").css('opacity', '0.7')
+    };
+    if (h > 10) {
+        $("#9Div").css('opacity', '0.7')
+        $("#10Div").css('opacity', '0.7')
+    };
+    if (h > 11) {
+        $("#9Div").css('opacity', '0.7')
+        $("#10Div").css('opacity', '0.7')
+        $("#11Div").css('opacity', '0.7')
+    };
+    if (h > 12) {
+        $("#9Div").css('opacity', '0.7')
+        $("#10Div").css('opacity', '0.7')
+        $("#11Div").css('opacity', '0.7')
+        $("#12Div").css('opacity', '0.7')
+    };
+    if (h > 13) {
+        $("#9Div").css('opacity', '0.7')
+        $("#10Div").css('opacity', '0.7')
+        $("#11Div").css('opacity', '0.7')
+        $("#12Div").css('opacity', '0.7')
+        $("#1Div").css('opacity', '0.7')
+    };
+    if (h > 14) {
+        $("#9Div").css('opacity', '0.7')
+        $("#10Div").css('opacity', '0.7')
+        $("#11Div").css('opacity', '0.7')
+        $("#12Div").css('opacity', '0.7')
+        $("#1Div").css('opacity', '0.7')
+        $("#2Div").css('opacity', '0.7')
+    };
+    if (h > 15) {
+        $("#9Div").css('opacity', '0.7')
+        $("#10Div").css('opacity', '0.7')
+        $("#11Div").css('opacity', '0.7')
+        $("#12Div").css('opacity', '0.7')
+        $("#1Div").css('opacity', '0.7')
+        $("#2Div").css('opacity', '0.7')
+        $("#3Div").css('opacity', '0.7')
+    };
+    if (h > 16) {
+        $("#9Div").css('opacity', '0.7')
+        $("#10Div").css('opacity', '0.7')
+        $("#11Div").css('opacity', '0.7')
+        $("#12Div").css('opacity', '0.7')
+        $("#1Div").css('opacity', '0.7')
+        $("#2Div").css('opacity', '0.7')
+        $("#3Div").css('opacity', '0.7')
+        $("#4Div").css('opacity', '0.7')
+    };
+    if (h > 17) {
+        $("#9Div").css('opacity', '0.7')
+        $("#10Div").css('opacity', '0.7')
+        $("#11Div").css('opacity', '0.7')
+        $("#12Div").css('opacity', '0.7')
+        $("#1Div").css('opacity', '0.7')
+        $("#2Div").css('opacity', '0.7')
+        $("#3Div").css('opacity', '0.7')
+        $("#4Div").css('opacity', '0.7')
+        $("#5Div").css('opacity', '0.7')
+    };
+
+    
+}
+
 // Set color based on time of day
 
-h = 16
+
 
 function init() {
     setTimeOfDay();
     setDivider();
+    setPastTimes();
 }
 
 init();
