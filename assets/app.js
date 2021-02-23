@@ -126,7 +126,7 @@ function setTimeOfDay() {
         }));
     } else {
         timeOfDay.text("Afternoon");
-        $("body").css("background-color", "#ffe227");
+        $("body").css("background-color", "#f4d160");
         $("section").css("background-color", "#d9dab0");
         $("body").css("color", "#4a3933");
         $("footer").css("color", "black");
