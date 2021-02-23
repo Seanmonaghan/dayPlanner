@@ -27,10 +27,31 @@ let fiveButton = $(".5button");
 // local storage
 
 let stored9 = localStorage.getItem('stored9');
-$("09input").textContent = stored9;
+$("#09input").val(stored9);
 
-let stored9 = JSON.parse(localStorage.getItem('array9'));
+let stored10 = localStorage.getItem('stored10');
+$("#10input").val(stored10);
 
+let stored11 = localStorage.getItem('stored11');
+$("#11input").val(stored11);
+
+let stored12 = localStorage.getItem('stored12');
+$("#12input").val(stored12);
+
+let stored1 = localStorage.getItem('stored1');
+$("#1input").val(stored1);
+
+let stored2 = localStorage.getItem('stored2');
+$("#2input").val(stored2);
+
+let stored3 = localStorage.getItem('stored3');
+$("#3input").val(stored3);
+
+let stored4 = localStorage.getItem('stored4');
+$("#4input").val(stored4);
+
+let stored5 = localStorage.getItem('stored5');
+$("#5input").val(stored5);
 
 
 // Time Variables
@@ -39,56 +60,40 @@ let h = today.get('hour');
 let currentTimeText = today.toLocaleString(f);
 
 nineButton.click(function() {
-    
-    array9.push({text: $('#09input').val()});
-    $('.09').append($('<li>', {
-         text: $('#09input').val()
-    }));
+    var textOfNine = $('#09input').val();
+    localStorage.setItem('stored9', textOfNine);
 });
 tenButton.click(function(){
-    $('.10').append($('<li>', {
-         text: $('#10input').val()
-    })) 
+    var textOfTen = $('#10input').val();
+    localStorage.setItem('stored10', textOfTen);
 });
 elevenButton.click(function(){
-    $('.11').append($('<li>', {
-         text: $('#11input').val()
-    }));
+    var textOfEleven = $('#11input').val();
+    localStorage.setItem('stored11', textOfEleven);
 });
 twelveButton.click(function(){
-    $('.12').append($('<li>', {
-         text: $('#12input').val()
-    }));
+    var textOfTwelve = $('#12input').val();
+    localStorage.setItem('stored12', textOfTwelve);
 });
 oneButton.click(function(){
-    $('.1').append($('<li>', {
-         text: $('#1input').val()
-    }));
+    var textOfOne = $('#1input').val();
+    localStorage.setItem('stored1', textOfOne);
 });
 twoButton.click(function(){
-    $('.2').append($('<li>', {
-         text: $('#2input').val()
-    }));
+    var textOfTwo = $('#2input').val();
+    localStorage.setItem('stored2', textOfTwo);
 });
 threeButton.click(function(){
-    $('.3').append($('<li>', {
-         text: $('#3input').val()
-    }));
+    var textOfThree = $('#3input').val();
+    localStorage.setItem('stored3', textOfThree);
 });
 fourButton.click(function(){
-    $('.4').append($('<li>', {
-         text: $('#4input').val()
-    }));
+    var textOfFour = $('#4input').val();
+    localStorage.setItem('stored4', textOfFour);
 });
 fiveButton.click(function(){
-    $('.5').append($('<li>', {
-         text: $('#5input').val()
-    }));
-});
-
-// Check off completed list items
-$("body").on('click', 'li', function() {
-    $(this).css("text-decoration", "line-through");
+    var textOfFive = $('#5input').val();
+    localStorage.setItem('stored5', textOfFive);
 });
 
 
@@ -96,7 +101,7 @@ $("body").on('click', 'li', function() {
 function setTimeOfDay() {
     currentDayText.text(today.toLocaleString());
     currentTime.text(currentTimeText);
-    if (h > 18) {
+    if (h > 17) {
         timeOfDay.text("Evening");
         $("body").css("background-color", "grey");
         images.prepend($('<img>',{id:'moon',src:'http://clipart-library.com/images_k/moon-clipart-transparent/moon-clipart-transparent-10.png'}));
@@ -111,7 +116,6 @@ function setTimeOfDay() {
     }
 };
 
-console.log(h);
 
 // Set color based on time of day
 if (h === 9) {
