@@ -55,47 +55,51 @@ $("#5input").val(stored5);
 
 
 // Time Variables
-let f = {hour: 'numeric', minute: '2-digit'};
+let f = {
+    hour: 'numeric',
+    minute: '2-digit'
+};
 let h = today.get('hour');
 let currentTimeText = today.toLocaleString(f);
 
-nineButton.click(function() {
+nineButton.click(function () {
     var textOfNine = $('#09input').val();
     localStorage.setItem('stored9', textOfNine);
 });
-tenButton.click(function(){
+tenButton.click(function () {
     var textOfTen = $('#10input').val();
     localStorage.setItem('stored10', textOfTen);
 });
-elevenButton.click(function(){
+elevenButton.click(function () {
     var textOfEleven = $('#11input').val();
     localStorage.setItem('stored11', textOfEleven);
 });
-twelveButton.click(function(){
+twelveButton.click(function () {
     var textOfTwelve = $('#12input').val();
     localStorage.setItem('stored12', textOfTwelve);
 });
-oneButton.click(function(){
+oneButton.click(function () {
     var textOfOne = $('#1input').val();
     localStorage.setItem('stored1', textOfOne);
 });
-twoButton.click(function(){
+twoButton.click(function () {
     var textOfTwo = $('#2input').val();
     localStorage.setItem('stored2', textOfTwo);
 });
-threeButton.click(function(){
+threeButton.click(function () {
     var textOfThree = $('#3input').val();
     localStorage.setItem('stored3', textOfThree);
 });
-fourButton.click(function(){
+fourButton.click(function () {
     var textOfFour = $('#4input').val();
     localStorage.setItem('stored4', textOfFour);
 });
-fiveButton.click(function(){
+fiveButton.click(function () {
     var textOfFive = $('#5input').val();
     localStorage.setItem('stored5', textOfFive);
 });
 
+h = 12
 
 // Greeting Conditional
 function setTimeOfDay() {
@@ -103,44 +107,74 @@ function setTimeOfDay() {
     currentTime.text(currentTimeText);
     if (h > 17) {
         timeOfDay.text("Evening");
-        $("body").css("background-color", "grey");
-        images.prepend($('<img>',{id:'moon',src:'http://clipart-library.com/images_k/moon-clipart-transparent/moon-clipart-transparent-10.png'}));
+        $("body").css("background-color", "#241663");
+        $("div").css("background-color", "#202040");
+        $("body").css("color", "#ffbd69");
+        images.prepend($('<img>', {
+            id: 'moon',
+            src: 'http://clipart-library.com/images_k/moon-clipart-transparent/moon-clipart-transparent-10.png'
+        }));
     } else if (h < 12) {
         timeOfDay.text("Morning");
-        $("body").css("background-color", "lightblue");
-        images.prepend($('<img>',{id:'risingSun',src:'https://www.pikpng.com/pngl/m/2-24499_28-collection-of-sunrise-clipart-transparent-clip-art.png'}));
+        $("body").css("background-color", "#8ac4d0");
+        $("div").css("background-color", "#ffd384");
+        $("body").css("color", "#4a3933");
+        images.prepend($('<img>', {
+            id: 'risingSun',
+            src: 'https://www.pikpng.com/pngl/m/2-24499_28-collection-of-sunrise-clipart-transparent-clip-art.png'
+        }));
     } else {
         timeOfDay.text("Afternoon");
-        $("body").css("background-color", "orange");
-        images.prepend($('<img>',{id:'sun',src:'http://clipart-library.com/image_gallery/n401246.jpg'}));
+        $("body").css("background-color", "#ffe227");
+        $("div").css("background-color", "#d9dab0");
+        $("body").css("color", "#4a3933");
+        images.prepend($('<img>', {
+            id: 'sun',
+            src: 'http://clipart-library.com/image_gallery/n401246.jpg'
+        }));
     }
 };
 
+h = 12;
+console.log(h);
 
+
+function setDivider() {
+    if (h === 9) {
+        $("#9Div").css('border', 'double 10px');
+    };
+    if (h === 10) {
+        $("#10Div").css('border', 'double 10px');
+    };
+    if (h === 11) {
+        $("#11Div").css('border', 'double 10px');
+    };
+    if (h === 12) {
+        $("#12Div").css('border', 'double 10px');
+    };
+    if (h === 13) {
+        $("#1Div").css('border', 'double 10px');
+    };
+    if (h === 14) {
+        $("#2Div").css('border', 'double 10px');
+    };
+    if (h === 15) {
+        $("#3Div").css('border', 'double 10px');
+    };
+    if (h === 16) {
+        $("#4Div").css('border', 'double 10px');
+    };
+    if (h === 17) {
+        $("#4Div").css('border', 'double 10px');
+    };  
+};
 // Set color based on time of day
-if (h === 9) {
-    $("#9Div").css('background-color', 'yellow');
-} else if (h === 10) {
-    $("#10Div").css('background-color', 'yellow');
-}else if (h === 11) {
-    $("#11Div").css('background-color', 'yellow');
-} else if (h === 12) {
-    $("#12Div").css('background-color', 'yellow');
-} else if (h === 13) {
-    $("#1Div").css('background-color', 'yellow');
-} else if (h === 14) {
-    $("#2Div").css('background-color', 'yellow');
-} else if (h === 15) {
-    $("#3Div").css('background-color', 'yellow');
-} else if (h === 16) {
-    $("#4Div").css('background-color', 'yellow');
-} else if (h === 16) {
-    $("#4Div").css('background-color', 'yellow');
-}
+
 
 
 function init() {
     setTimeOfDay();
+    setDivider();
 }
 
 init();
