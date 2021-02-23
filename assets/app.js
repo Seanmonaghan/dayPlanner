@@ -137,7 +137,7 @@ function setTimeOfDay() {
     }
 };
 
-
+// Set current time of day
 function setDivider() {
     if (h === 9) {
         $("#9Div").css('border', 'double 10px');
