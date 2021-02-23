@@ -100,8 +100,6 @@ fiveButton.click(function () {
     localStorage.setItem('stored5', textOfFive);
 });
 
-h = 14;
-
 // Greeting Conditional
 function setTimeOfDay() {
     currentDayText.text(today.toLocaleString());
